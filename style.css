@@ -89,14 +89,14 @@ nav ul li{
     height: 100%; 
     background: #0ef;
     transform: skewX(35deg);
-    z-index: 1;
+    z-index: -1;
     transition: 1s;
 
 }
 .nav_button:hover{
     
     transition-delay: 0s, 0s;
-    color: #fff;
+    color: white;
     box-shadow:
         0 0 10px #0ef,
         0 0 20px #0ef,
@@ -107,34 +107,11 @@ nav ul li{
 .nav_button:hover:before{
     width:100px;
 }
-
-.brand img{
-    width: 44px;
-    padding: 0 px;
-    margin: 0px;
-    
-    
-
-}
-.brand img:hover{
-    transition-delay: 0s, 0s;
-    box-shadow:
-    0 0 10px rgb(25, 207, 65),
-    0 0 20px rgb(25, 207, 65),
-    0 0 40px rgb(25, 207, 65),
-    0 0 80px rgb(25, 207, 65),
-    0 0 160px rgb(25, 207, 65);
-    background-color: rgb(25, 207, 65);
-    border-radius: 20px;
-    
-
-}
 .nav_spotify{
     position: relative;
     display: inline-block;
     color: rgb(25, 207, 65);
     text-decoration: none;
-    
     padding: 2px 1px;
     z-index: 1;
     overflow: hidden;
@@ -167,6 +144,28 @@ nav ul li{
 .nav_spotify:hover:before{
     width:100px;
 }
+.brand img{
+    width: 44px;
+    padding: 0 px;
+    margin: 0px;
+    
+    
+
+}
+.brand img:hover{
+    transition-delay: 0s, 0s;
+    box-shadow:
+    0 0 10px rgb(25, 207, 65),
+    0 0 20px rgb(25, 207, 65),
+    0 0 40px rgb(25, 207, 65),
+    0 0 80px rgb(25, 207, 65),
+    0 0 160px rgb(25, 207, 65);
+    background-color: rgb(25, 207, 65);
+    border-radius: 20px;
+    
+
+}
+
 
 .brand {
     display: flex;
