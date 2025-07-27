@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --primary: #1db954;
+    --accent: #0ef;
+    --dark-bg: rgba(0, 0, 0, 0.6);
+}
 body{
-    background-color: cyan;
-    
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #fff;
+    min-height: 100vh;
 }
 
 *{
@@ -39,46 +48,36 @@ body{
 }
 nav{
     font-family: 'Ubuntu', sans-serif;
-    /* background-color: rgba(25, 117, 124,0.5); */
+    background: var(--dark-bg);
     backdrop-filter: blur(10px);
-    mix-blend-mode: overlay;
-    
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
 }
 
 nav ul{
-    
     display: flex;
     align-items: center;
-    list-style-type: none;
-    height: 65px;
-    /* background-color: rgba(66, 161, 182, .3); */
-    
-    mix-blend-mode: overlay;
-    color: white;
+    list-style: none;
+    color: #fff;
 }
 
 nav ul li{
-    padding: 0 12px;
+    margin: 0 12px;
 }
 .nav_button{
-    
     position: relative;
     display: inline-block;
-    /* font-size: 1.5em; */
-    /* letter-spacing: .1em; */
-    color: #0ef;
-    /* background-color: rgb(22, 61, 64); */
+    color: var(--accent);
     text-decoration: none;
     text-transform: uppercase;
-    border: 1px solid #0ef;
-    padding: 10px 10px;
+    border: 1px solid var(--accent);
+    padding: 10px 16px;
     z-index: 1;
     overflow: hidden;
-    transition: color 1s, box-shadow 1s;
+    transition: color 0.3s, box-shadow 0.3s;
     border-radius: 20px;
-    margin:4px;
-
-
+    margin: 4px;
 }
 .nav_button::before{
     content: '';
@@ -86,48 +85,34 @@ nav ul li{
     top: 0;
     left: -50px;
     width: 0;
-    height: 100%; 
-    background: #0ef;
+    height: 100%;
+    background: var(--accent);
     transform: skewX(35deg);
     z-index: -1;
-    transition: 1s;
-
+    transition: 0.3s;
 }
-.nav_button:hover{
-    
-    transition-delay: 0s, 0s;
-    color: white;
-    box-shadow:
-        0 0 10px #0ef,
-        0 0 20px #0ef,
-        0 0 40px #0ef,
-        0 0 80px #0ef,
-        0 0 160px #0ef;
+.nav_button:hover {
+    color: #fff;
+    box-shadow: 0 0 10px var(--accent);
 }
-.nav_button:hover:before{
-    width:100px;
+.nav_button:hover:before {
+    width: 120%;
 }
 .nav_spotify{
     position: relative;
     display: inline-block;
-    color: rgb(25, 207, 65);
+    color: var(--primary);
     text-decoration: none;
     padding: 2px 1px;
     z-index: 1;
     overflow: hidden;
-    transition: color 1s, box-shadow 1s;
+    transition: color 0.3s, box-shadow 0.3s;
     border-radius: 20px;
-    margin:4px;
+    margin: 4px;
 }
 .nav_spotify:hover{
-    transition-delay: 0s, 0s;
     color: #fff;
-    box-shadow:
-    0 0 10px rgb(25, 207, 65),
-    0 0 20px rgb(25, 207, 65),
-    0 0 40px rgb(25, 207, 65),
-    0 0 80px rgb(25, 207, 65),
-    0 0 160px rgb(25, 207, 65);
+    box-shadow: 0 0 10px var(--primary);
 }
 .nav_spotify::before{
     content: '';
@@ -135,35 +120,23 @@ nav ul li{
     top: 0;
     left: -50px;
     width: 0;
-    height: 100%; 
-    background: rgb(25, 207, 65);
+    height: 100%;
+    background: var(--primary);
     transform: skewX(35deg);
     z-index: -1;
-    transition: 1s;
+    transition: 0.3s;
 }
 .nav_spotify:hover:before{
-    width:100px;
+    width: 120%;
 }
 .brand img{
     width: 44px;
-    padding: 0 px;
-    margin: 0px;
-    
-    
-
+    margin: 0;
 }
 .brand img:hover{
-    transition-delay: 0s, 0s;
-    box-shadow:
-    0 0 10px rgb(25, 207, 65),
-    0 0 20px rgb(25, 207, 65),
-    0 0 40px rgb(25, 207, 65),
-    0 0 80px rgb(25, 207, 65),
-    0 0 160px rgb(25, 207, 65);
-    background-color: rgb(25, 207, 65);
+    box-shadow: 0 0 10px var(--primary);
+    background-color: var(--primary);
     border-radius: 20px;
-    
-
 }
 
 
@@ -178,14 +151,15 @@ nav ul li{
 
 .container{
     min-height: 72vh;
-    color: white;
+    color: #fff;
     font-family: 'Varela Round', sans-serif;
     display: flex;
-    margin: 23px auto;
+    margin: 2rem auto;
     width: 40%;
     border-radius: 12px;
-    padding: 34px;
-   
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
 }
 .songItemContainer{
     margin-top: 74px;
@@ -195,30 +169,32 @@ nav ul li{
     position: sticky;
     bottom: 0;
     height: 130px;
-    /* background-color: black; */
-    background-color: rgba(66, 161, 182,);
-
+    background: var(--dark-bg);
     backdrop-filter: blur(10px);
-    mix-blend-mode: overlay;
-    color: white;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
+
 .icons{
-    margin-top: 14px; 
-    
+    margin-top: 14px;
 }
 .icons i{
     cursor: pointer;
-    
+    color: var(--primary);
+    transition: color 0.3s;
+}
+.icons i:hover{
+    color: #fff;
 }
 
 #myProgressBar{
-    width: 80vw; 
+    width: 80vw;
     cursor: pointer;
+    accent-color: var(--primary);
 }
 
 
@@ -226,30 +202,21 @@ nav ul li{
 .songItem{
     height: 50px;
     display: flex;
-    background-color: rgb(174, 219, 185);
-    
-    color: black;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
     margin: 12px 0;
     justify-content: space-between;
     align-items: center;
     border-radius: 34px;
+    padding: 0 1rem;
+    transition: background 0.3s, box-shadow 0.3s;
 }
 .songItem:hover{
-    transition-delay: 0s, 0s;
-    box-shadow:
-    0 0 10px rgb(25, 207, 65),
-    0 0 20px rgb(25, 207, 65),
-    0 0 40px rgb(25, 207, 65),
-    0 0 80px rgb(25, 207, 65),
-    0 0 160px rgb(25, 207, 65);
+    background: rgba(30, 215, 96, 0.2);
+    box-shadow: 0 0 10px var(--primary);
 }
 .songItem::after{
-    box-shadow:
-    0 0 10px rgb(25, 207, 65),
-    0 0 20px rgb(25, 207, 65),
-    0 0 40px rgb(25, 207, 65),
-    0 0 80px rgb(25, 207, 65),
-    0 0 160px rgb(25, 207, 65);
+    box-shadow: 0 0 10px var(--primary);
 }
 
 .songItem img{
@@ -280,10 +247,7 @@ nav ul li{
 }
 
 @media only screen and (max-width: 1100px) {
-    body {
-      background-color: cyan;
-    }
     .container{
         width: 70%;
     }
-  }
+}
